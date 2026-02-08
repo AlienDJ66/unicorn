@@ -12,9 +12,9 @@ Run these steps once after cloning or forking the Unicorn project.
 ### macOS / Linux
 
 ```bash
-mkdir -p .claude && ln -s skills .claude/skills
-mkdir -p .agent && ln -s skills .agent/skills
-mkdir -p .gemini && ln -s skills .gemini/skills
+mkdir -p .claude && ln -s ../skills .claude/skills
+mkdir -p .agent && ln -s ../skills .agent/skills
+mkdir -p .gemini && ln -s ../skills .gemini/skills
 ```
 
 Verify: `ls -la .claude/skills .agent/skills .gemini/skills`
