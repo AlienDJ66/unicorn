@@ -48,7 +48,7 @@ Use `--private` for projects you want to keep private, or `--public` for open so
 
 ## Getting Started
 
-Follow the [Ping Bo's YouTube Channel](https://www.youtube.com/@pingbos) for tutorials and walkthroughs on how to use this incubator.
+Follow [PING BOS](https://www.youtube.com/@pingbos) (Product Incubator Next Gen, Business Operating System) on YouTube for tutorials and walkthroughs.
 
 ## For AI Agents
 
