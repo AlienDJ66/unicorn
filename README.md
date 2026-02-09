@@ -4,7 +4,7 @@
 
 ## What Is This?
 
-The Unicorn Project is a product incubator where you discover what to build, who to build for, and how to build it using AI. You will move from idea to deployed product through a structured curriculum and hands-on projects.
+The Unicorn Project is a product incubator where you discover what to build, who to build for, and how to build it using AI. You will move from idea to deployed product through hands-on projects.
 
 ## The Three Questions
 
@@ -26,7 +26,6 @@ Identify your audience and your delivery mechanism. A great idea with no path to
 
 | Directory | Purpose |
 |-----------|---------|
-| `curriculum/` | Your learning journey (start here) |
 | `projects/agentic-landing-template/` | The build project (your hands) |
 | `knowledge/` | Your thinking vault (your head, Obsidian) |
 | `skills/` | AI agent patterns (power tools) |
@@ -49,9 +48,7 @@ Use `--private` for projects you want to keep private, or `--public` for open so
 
 ## Getting Started
 
-1. **Read** `curriculum/README.md` to understand the learning path
-2. **Work through** the lessons in order
-3. **Build** with `curriculum/04-build/` when you reach the hands-on phase
+Follow the [Ping Bo's YouTube Channel](https://www.youtube.com/@pingbos) for tutorials and walkthroughs on how to use this incubator.
 
 ## For AI Agents
 
