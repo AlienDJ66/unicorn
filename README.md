@@ -27,8 +27,20 @@ Identify your audience and your delivery mechanism. A great idea with no path to
 | Directory | Purpose |
 |-----------|---------|
 | `projects/agentic-landing-template/` | The build project (your hands) |
-| `knowledge/` | Your thinking vault (your head, Obsidian) |
+| `template_knowledge/` | Template for your personal knowledge vault (see below) |
 | `skills/` | AI agent patterns (power tools) |
+
+## Your Personal Knowledge Vault
+
+When you initialize the Unicorn project for the first time, `template_knowledge/` is copied to `personal_knowledge/`. This becomes your private Obsidian vault for:
+
+- Ideas and inventions
+- Learning and study notes
+- News and insights
+- Relationships and people
+- Daily reflections
+
+**Important:** `personal_knowledge/` is git-ignored and should NOT be checked in. This is your private vault.
 
 ## Managing Your Projects
 
