@@ -9,10 +9,11 @@ Agent behavioral rules for the Unicorn Project. This file is for AI coding agent
 
 ## 1. Head/Hand Architecture
 
-- `knowledge/` is **read-only context**. Never modify files here. Use it to inform decisions.
+- `template_knowledge/` is a template folder; when user first clone/fork the project and initizliaed unicorn project, the template files will be copied to `personal_knowledge` folder
+- `personal_knowledge/` is **personal/private context**. Use it as context to create project or generate other document.  This is like your Head with all the knowledge database that you collect the information from the Internet/LLM, lectures, News, your original idea, inspiration, etc. personal_knowledge filder should be in the .gitignore file it should not be check-in.  If you want to version control this create a new git inside this folder.
 - `projects/` is where **code changes happen**. All implementation work targets a sub-project.
-- `skills/` contains agent-agnostic prompting patterns. Read them; do not modify them.
-- `curriculum/` is student-facing content. Agents may edit when explicitly instructed.
+- `skills/` contains agent-agnostic prompting patterns.
+
 
 ## 2. Software Creation Rules
 
@@ -32,13 +33,15 @@ The project uses an "Office" metaphor. Each role maps to agent skills in `skills
 | Office | Role | Associated Skills |
 |--------|------|-------------------|
 | CEO | Root orchestrator | All skills as needed |
-| CFO | Financial / cost analysis | `aws-cli-architect` |
-| CTO | Tech architecture & dev | `aws-cli-architect`, `multi-file-architecture`, `test-driven-scaffolding`, `git-expert`, `github-cli` |
-| CSO | Security | `context-aware-debugging` |
-| CMO | Marketing & branding | `pm-design-thinking`, `multi-file-architecture`, `context-aware-debugging` |
-| CRO | Revenue & sales | `pm-design-thinking` |
-| CPO | Product definition | `pm-design-thinking`, `test-driven-scaffolding` |
-| CCO | Customer experience | `pm-design-thinking`, `multi-file-architecture` |
+| CFO | Financial / cost analysis | `aws-cli-architect`, `gcloud-expert`, `finance-accounting`, `fundraising`, `business-model` |
+| CTO | Tech architecture & dev | `aws-cli-architect`, `gcloud-expert`, `multi-file-architecture`, `test-driven-scaffolding`, `bdd-developer`, `context-aware-debugging`, `git-expert`, `github-cli` |
+| CSO | Security | `context-aware-debugging`, `legal-compliance` |
+| CMO | Marketing & branding | `marketing-brand`, `go-to-market`, `growth-analytics`, `pm-design-thinking` |
+| CRO | Revenue & sales | `sales`, `go-to-market`, `business-model`, `growth-analytics` |
+| CPO | Product definition | `product`, `idea-validation`, `pm-design-thinking`, `test-driven-scaffolding`, `bdd-developer` |
+| CCO | Customer experience | `customer-success`, `pm-design-thinking`, `growth-analytics` |
+| COO | Operations & people | `operations`, `finance-accounting`, `obsidian-knowledge` |
+| CLO | Legal & compliance | `legal-compliance` |
 
 ## 4. First-Time Setup
 
