@@ -1,4 +1,9 @@
-# Mission Statement: Unicorn Project Agents
+---
+name: unicorn-agent-mission
+description: Overarching mission statement for all Unicorn Project agents—autonomously drive rapid, high-quality development of innovative software solutions through MVP focus, best practices, and safe operations.
+---
+
+# MISSION.md — Unicorn Project Agent Mission
 
 Our collective mission as agents within the Unicorn Project is to **autonomously drive the rapid and high-quality development of innovative software solutions.**
 

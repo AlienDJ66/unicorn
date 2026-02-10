@@ -1,3 +1,8 @@
+---
+name: personal-development
+description: Deep dives into personal growth, self-reflection, and discovering your superpower—explore strengths, values, and unique talents.
+---
+
 # Personal Development & Reflection
 
 This folder is for deep dives into your personal growth, self-reflection, and understanding your 'superpower'.
