@@ -1,42 +1,55 @@
 ---
 name: unicorn
-description: Free, open-source AI command center for Builder, job seekers who want a role in AI-native development. 31 AI-powered skills, a private knowledge vault, and a project workspace.
+description: Free, open-source AI command center that turns one builder into a full team. 31 AI-powered skills spanning engineering, product, marketing, sales, finance, and operations — so you can build, ship, and grow without hiring an army.
 ---
 
 # Unicorn
 
-**Land your next role in AI-native development.**
+**You've been told AI is replacing knowledge workers. What if you became the AI-augmented knowledge worker who can perform multiple roles?**
 
-The industry is shifting to AI-native workflows — where developers, designers, and knowledge workers build *with* AI, not just *about* AI. Unicorn is a free, open-source platform that helps you build real AI skills, ship projects that prove it, and present yourself to employers who are hiring for this new world.
+Unicorn is a free, open-source command center that gives you 31 AI-powered skills — spanning engineering, product, marketing, sales, finance, legal, and operations. One builder, augmented by AI, doing the work that used to require an entire team.
 
 ## Who This Is For
 
-**Job seekers who want a role in AI-native development** — software engineers, data professionals, product managers, designers, career transitioners — anyone who wants to work with AI tools as a daily practice, not just a buzzword on a resume.
+**Builders who want to do more than just code.** Software engineers who also need to validate ideas. Technical founders who also need to close deals. Career transitioners who want to prove they can build, ship, and grow — not just write prompts.
 
-If you've been asking "how do I break into AI?" — this is your launchpad.
+If you've been using AI as a chatbot, Unicorn turns it into your team.
+
+## Your AI-Augmented Team
+
+The 31 skills are organized as an "Office" — each role is an AI-powered expert you can call on:
+
+| Role | What it does for you | Example skills |
+|------|---------------------|----------------|
+| **CTO** | Architect, build, test, deploy | `multi-file-architecture`, `test-first-development`, `docker-expert`, `git-expert` |
+| **CPO** | Define what to build and for whom | `product`, `idea-validation`, `pm-design-thinking`, `frontend-ui-ux` |
+| **CMO** | Position, brand, reach your audience | `marketing-brand`, `go-to-market`, `growth-analytics` |
+| **CRO** | Close deals, build partnerships | `sales`, `business-development`, `business-model` |
+| **CFO** | Manage costs, plan finances | `finance-accounting`, `fundraising`, `aws-cli-architect` |
+| **COO** | Run operations, build your career | `operations`, `career-resume`, `portfolio-strategy`, `github-profile` |
+
+You don't need to hire a team. You need to ask the right questions — and let AI handle the execution. [Full list of 31 skills →](docs/skills-reference.md)
 
 ## Why This Exists
 
-You've probably tried asking ChatGPT or Claude for help. It feels like talking to a chatbot. You get a generic answer and move on. But AI is far more powerful than that — most people just don't know how to use it.
-
 Here's the real problem:
 
-- **You don't know what to ask.** AI can't solve your problem if you don't know what problem to solve.
-- **Your thinking is scattered.** A thread in ChatGPT, a conversation in Claude, notes in one app, tasks in another. Nothing connects.
-- **Knowing AI and proving you can use it are two different things.** Employers want to see you build with AI, not talk about it.
+- **AI can do a lot — but you don't know what to ask.** AI can't architect your solution if you don't know what problem to solve first.
+- **Your thinking is scattered.** A thread in ChatGPT, a conversation in Claude, notes in one app, code in another. Nothing connects.
+- **Being AI-augmented requires structure, not just prompts.** The difference between asking AI a question and operating as a one-person company is a repeatable workflow.
 
-Unicorn gives you the skills, the workspace, and the portfolio to prove you can do AI-native work.
+Unicorn gives you the skills, the knowledge vault, and the project workspace to operate across multiple roles — with AI doing the heavy lifting.
 
 ## What You Get
 
 When you clone this project, you get:
 
-- **31 AI-powered skills** — Resume tailoring, idea validation, product development, sales, marketing, business development, legal, finance, and more. Just describe what you need and the AI applies the right skill. [Full list →](docs/skills-reference.md)
-- **A private knowledge vault** — Your ideas, notes, goals, career materials, and learning in one place. Never checked into the public repo.
-- **A project workspace** — Build and ship real projects that demonstrate your AI-native skills to employers. A "project" can be anything: a blog post, a marketing research brief, a deployed web application, or an automated workflow. Video/image production and workflow automation within the Unicorn command center (with CLI agents) are under development.
+- **31 AI-powered skills** — Not just coding. Product development, sales, marketing, legal, finance, operations, and more. Just describe what you need and the AI applies the right expertise. [Full list →](docs/skills-reference.md)
+- **A private knowledge vault** — Your ideas, notes, goals, technical decisions, and learning in one place. Never checked into the public repo.
+- **A project workspace** — Build and ship real projects with AI-assisted workflows. A "project" can be anything: a blog post, a marketing research brief, a deployed web application, or an automated workflow. Video/image production and workflow automation within the Unicorn command center (with CLI agents) are under development.
 - **Works with any AI** — Claude, Gemini, ChatGPT, open-source models. Vendor-agnostic, no lock-in.
 
-## Start Here: Land Your AI Role
+## Start Here
 
 ```bash
 # Clone the project
@@ -44,26 +57,26 @@ git clone https://github.com/pingwu/unicorn.git
 cd unicorn
 ```
 
-Then start your CLI coding agent (Cloud desktop/code, Gemini CLI, Codex CLI, or run from IDE with terminal), tell your AI agent: **"Run the init unicorn setup"** — it will create your personal knowledge vault and connect the skills.
+Then start your CLI coding agent (Claude Code, Gemini CLI, Codex CLI, or run from your IDE terminal) and tell it: **"Run the init unicorn setup"** — it will create your personal knowledge vault and connect the skills.
 
 **Your first three moves:**
-1. **"Help me tailor my resume for this job posting"** → the AI uses `career-resume` to match your experience to AI-native roles
-2. **"Build me a personal landing page"** → ship your first project in `projects/agentic-landing-template`
-3. **Find your skill gaps** → participate in the Unicorn project itself. Contributing to an open-source AI-native platform *is* the proof employers want to see.
+1. **"Build me a personal landing page"** → ship your first project using AI-paired development
+2. **"Help me validate this idea"** → the AI uses `idea-validation` and `product` to pressure-test before you build
+3. **Contribute back** → participate in the Unicorn project itself. Contributing to an open-source AI-native platform proves you can ship across multiple roles.
 
 Or follow the manual setup in [INIT_UNICORN.md](INIT_UNICORN.md).
 
-## Grow Beyond the Job Search
+## Grow With Your Ambition
 
-Unicorn meets you where you are — and grows with you.
+Unicorn meets you where you are — and scales with you.
 
 | Stage | You're saying... | Unicorn helps you... |
 |-------|-----------------|---------------------|
-| **Looking for a role** | "I want to work in AI but don't know how to prove it" | Build portfolio projects, tailor your resume |
-| **Exploring what's next** | "I want to do something on my own but don't know where to start" | Validate ideas, find your direction |
-| **Building something** | "I'm reaching out but nothing sticks" | Define your product, find your audience |
-| **Getting paid** | "I have interest but can't convert to revenue" | Close deals, grow revenue, build partnerships |
-| **Running a business** | "I need to operate and scale" | Handle legal, finances, operations, fundraising |
+| **Building** | "I want to ship with AI-assisted workflows" | Architecture, testing, debugging, deployment |
+| **Launching** | "I have something — now I need users" | Validate ideas, define your product, go to market |
+| **Selling** | "I have interest but can't convert to revenue" | Close deals, grow revenue, build partnerships |
+| **Scaling** | "I need to operate and grow" | Handle legal, finances, operations, fundraising |
+| **Growing your career** | "I want to prove I can build with AI" | Portfolio projects, resume tailoring, GitHub presence |
 
 ## The One Thing AI Can't Do for You
 
