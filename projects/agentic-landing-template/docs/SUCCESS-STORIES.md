@@ -1,3 +1,8 @@
+---
+name: success-stories
+description: Showcases what learners have built after completing the agentic landing page template.
+---
+
 # Success Stories
 
 > **"When AI can do anything for you, what will you build?"**

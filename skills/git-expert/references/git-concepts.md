@@ -1,3 +1,8 @@
+---
+name: git-concepts
+description: Fundamental Git concepts including file states, objects, references, remotes, and merge strategies.
+---
+
 # Git Core Concepts
 
 This document explains fundamental Git concepts that underpin its operation, helping you to understand version control at a deeper level.

@@ -128,3 +128,10 @@ Validation method: Manually brokered first shipments to learn the workflow.
 "Before I build anything, help me design a 5-question Mom Test interview for [target customer]. Then define GO/PIVOT/KILL criteria I should evaluate after 10 conversations."
 
 The agent becomes your validation coach — structuring discovery so you learn the truth, not just what you want to hear.
+
+## Related Skills
+
+| Skill | When to use it |
+|-------|---------------|
+| `pm-design-thinking` | After validation — define features through user outcomes and design thinking |
+| `product` | After feature definition — write PRDs, prioritize roadmaps with RICE scoring |

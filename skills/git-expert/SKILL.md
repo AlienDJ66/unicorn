@@ -74,5 +74,5 @@ Learn how to safely undo changes and recover from common Git blunders:
 ## Troubleshooting
 
 *   **"Detached HEAD" state:** Understand that HEAD is pointing directly to a commit, not a branch. Create a new branch if you want to make new commits from this point.
-*   **Merge Conflicts:** Refer to `git-workflows.md` for basic resolution, and advanced techniques might involve `git mergetool`.
+*   **Merge Conflicts:** Refer to `references/git-recovery.md` for resolution strategies, and advanced techniques might involve `git mergetool`.
 *   **"Rewriting history" warnings:** Remember that operations like `rebase` and `amend` change commit hashes. Avoid these on shared branches unless absolutely necessary and coordinated with your team.

@@ -1,3 +1,8 @@
+---
+name: gherkin-cheatsheet
+description: Quick reference for Gherkin syntax including core keywords, scenario outlines, tags, doc strings, and data tables.
+---
+
 # Gherkin Syntax Cheatsheet
 
 Gherkin is a business-readable, domain-specific language for defining software behavior. It uses a structured syntax with specific keywords to describe scenarios.

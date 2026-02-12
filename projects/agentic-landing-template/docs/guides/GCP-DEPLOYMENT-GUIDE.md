@@ -1,3 +1,8 @@
+---
+name: gcp-deployment-guide
+description: Step-by-step guide to deploying a landing page to Google Cloud using natural language with AI coding assistants.
+---
+
 # GCP Deployment Guide
 
 **Deploy your landing page to Google Cloud using natural language with your AI coding assistant**

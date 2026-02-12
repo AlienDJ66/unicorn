@@ -1,3 +1,8 @@
+---
+name: prd
+description: Product requirements document for the agentic landing page template project.
+---
+
 # Product Requirements Document (PRD)
 
 ## Agentic Landing Page Template

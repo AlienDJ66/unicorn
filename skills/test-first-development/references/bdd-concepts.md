@@ -1,3 +1,8 @@
+---
+name: bdd-concepts
+description: Core Behavior-Driven Development concepts including Three Amigos, ubiquitous language, and outside-in development.
+---
+
 # Core BDD Concepts
 
 Behavior-Driven Development (BDD) is more than just a testing technique; it's a collaborative approach to software development that aims to create a shared understanding of how an application should behave.

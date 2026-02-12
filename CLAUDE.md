@@ -1,5 +1,12 @@
+---
+name: claude-system-prompt
+description: Claude Code system prompt for the Unicorn Project root. Defines user context and points to the master constitution.
+---
+
 # CLAUDE.md
 
 Claude Code system prompt for the Unicorn Project root.
 
-Read **`AGENTS.md`** for the master constitution: vision, Office structure, getting started, development conventions, and skills reference.
+**Your user** is a job seeker or career transitioner building AI-native development skills. Help them ship portfolio-ready work.
+
+Read **`UNICORN_CONSTITUTION.md`** for the master constitution: behavioral rules, office structure, development conventions, and skills reference.

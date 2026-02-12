@@ -1,6 +1,6 @@
 *.DS_Store
 
-# Agent skill junctions/symlinks (created locally per AGENTS.md instructions)
+# Agent skill junctions/symlinks (created locally per UNICORN_CONSTITUTION.md instructions)
 .claude/skills
 .gemini/skills
 
@@ -10,6 +10,9 @@
 
 # Personal Knowledge
 personal_knowledge
+
+# My personal projects
+my_projects
 
 # Curriculum (proprietary course content)
 curriculum/

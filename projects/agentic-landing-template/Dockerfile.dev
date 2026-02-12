@@ -3,7 +3,7 @@
 # Supports VS Code Dev Containers, Cursor, and standalone Docker development
 #
 # Includes vendor CLIs: gh, aws, gcloud, az
-# (per AGENTS.md: "Vendor CLIs over custom scripts")
+# (per UNICORN_CONSTITUTION.md: "Vendor CLIs over custom scripts")
 
 FROM node:20-alpine
 

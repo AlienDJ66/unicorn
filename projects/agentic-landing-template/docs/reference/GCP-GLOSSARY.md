@@ -1,3 +1,8 @@
+---
+name: gcp-glossary
+description: Beginner-friendly reference explaining core Google Cloud Platform services with AWS equivalents and free tier details.
+---
+
 # GCP Services Glossary
 
 **A beginner-friendly reference for Google Cloud Platform services**

@@ -1,3 +1,8 @@
+---
+name: aws-deployment-guide
+description: Step-by-step guide to deploying a landing page to AWS using natural language with AI coding assistants.
+---
+
 # AWS Deployment Guide
 
 **Deploy your landing page to AWS using natural language with your AI coding assistant**

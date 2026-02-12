@@ -1,3 +1,8 @@
+---
+name: aws-pricing-guide
+description: Guide to understanding AWS costs, billing alerts, free tier limits, and cost optimization for landing page deployments.
+---
+
 # AWS Pricing Guide
 
 **Understanding AWS costs, billing, and how to avoid surprises**

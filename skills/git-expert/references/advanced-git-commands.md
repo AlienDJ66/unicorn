@@ -1,3 +1,8 @@
+---
+name: advanced-git-commands
+description: Reference for advanced Git commands including rebase, cherry-pick, reflog, bisect, filter-repo, and hooks.
+---
+
 # Advanced Git Commands
 
 This document provides explanations and usage examples for advanced Git commands.

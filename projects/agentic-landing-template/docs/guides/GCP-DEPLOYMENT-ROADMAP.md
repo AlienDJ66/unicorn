@@ -1,3 +1,8 @@
+---
+name: gcp-deployment-roadmap
+description: Phase-by-phase roadmap for deploying a landing page from local development to GCP Cloud Run production.
+---
+
 # GCP Deployment Roadmap
 
 ## From Local Development to Production on Google Cloud

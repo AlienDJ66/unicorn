@@ -143,3 +143,10 @@ Split by persona:
 "Write a PRD for [feature] using the Square template. Include 3 explicit non-goals with reasoning. Then RICE-score it against [alternative feature] and tell me which one to build first."
 
 The agent becomes your product thinking partner — bringing rigor to what gets built and what gets cut.
+
+## Related Skills
+
+| Skill | When to use it |
+|-------|---------------|
+| `idea-validation` | Before building — validate the problem exists and is worth solving |
+| `pm-design-thinking` | During feature definition — frame features through user outcomes |

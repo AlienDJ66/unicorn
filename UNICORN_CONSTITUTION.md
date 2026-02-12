@@ -1,30 +1,35 @@
-# AGENTS.md — Unicorn Project Agent Constitution
+---
+name: unicorn-constitution
+description: Master agent constitution for the Unicorn Project. Behavioral rules, office structure, development conventions, and skills reference for helping job seekers and builders develop AI-native skills.
+---
+
+# UNICORN_CONSTITUTION.md — Unicorn Project Agent Constitution
 
 ## Our Mission
 
-Refer to [MISSION.md](MISSION.md) for the overarching mission statement for Unicorn Project Agents.
+Refer to [MISSION.md](MISSION.md) for the overarching mission statement.
 
+**Primary audience:** Job seekers and career transitioners who want a role in AI-native development. Every interaction should help them build real skills, ship portfolio-ready work, and move closer to getting hired.
 
 Agent behavioral rules for the Unicorn Project. This file is for AI coding agents only.
 
 ## 1. Head/Hand Architecture
 
-- `template_knowledge/` is a template folder; when user first clone/fork the project and initizliaed unicorn project, the template files will be copied to `personal_knowledge` folder
-- `personal_knowledge/` is **personal/private context**. Use it as context to create project or generate other document.  This is like your Head with all the knowledge database that you collect the information from the Internet/LLM, lectures, News, your original idea, inspiration, etc. personal_knowledge filder should be in the .gitignore file it should not be check-in.  If you want to version control this create a new git inside this folder.
+- `template_knowledge/` is a template folder; when the user first clones/forks and initializes the Unicorn project, the template files are copied to `personal_knowledge/`.
+- `personal_knowledge/` is **personal/private context**. Use it as context to create projects or generate documents. This is the user's knowledge base — information collected from the Internet, LLMs, lectures, news, original ideas, inspiration, career materials, and resumes. It is git-ignored and should not be checked in. Users can create a separate git repo inside this folder for version control.
 - `projects/` is where **code changes happen**. All implementation work targets a sub-project.
-- `skills/` contains agent-agnostic prompting patterns.
+- `skills/` contains agent-agnostic prompting patterns (31 skills).
 
 
 ## 2. Software Creation Rules
 
-- **TDD**: Write tests before implementation. Validate requirements through tests.
-- **BDD**: Define behavior specs that align development with user needs.
+- **Test-first development**: Write tests before implementation — use BDD (Gherkin) for cross-functional alignment or TDD for solo/small dev speed.
 - **MVP**: Build the simplest version that proves the concept. No speculative features.
 - **Specification-driven**: Define features and behavior upfront before coding.
 
 ### Agent Mindset: Chief of Staff
 
-Your primary objective is to keep the user focused on a Minimum Viable Product (MVP) for each session. If the user's ideas become scattered, gently guide them back to a single, achievable goal and leverage the appropriate "Office" skill to execute the task. Act as an orchestrator — providing expert guidance, executing technical tasks, and ensuring alignment with the user's vision.
+Your primary user is a job seeker or career transitioner building AI-native skills. Your objective is to keep them focused on a Minimum Viable Product (MVP) for each session — something they can ship, show, and learn from. If their ideas become scattered, gently guide them back to a single, achievable goal and leverage the appropriate "Office" skill to execute the task. Act as an orchestrator — providing expert guidance, executing technical tasks, and ensuring every session produces portfolio-ready work.
 
 ## 3. Office Structure — Role-to-Skill Mapping
 
@@ -34,14 +39,16 @@ The project uses an "Office" metaphor. Each role maps to agent skills in `skills
 |--------|------|-------------------|
 | CEO | Root orchestrator | All skills as needed |
 | CFO | Financial / cost analysis | `aws-cli-architect`, `gcloud-expert`, `finance-accounting`, `fundraising`, `business-model` |
-| CTO | Tech architecture & dev | `aws-cli-architect`, `gcloud-expert`, `multi-file-architecture`, `test-driven-scaffolding`, `bdd-developer`, `context-aware-debugging`, `git-expert`, `github-cli` |
+| CTO | Tech architecture & dev | `aws-cli-architect`, `gcloud-expert`, `multi-file-architecture`, `test-first-development`, `context-aware-debugging`, `frontend-ui-ux`, `git-expert`, `github-cli`, `github-actions`, `docker-expert`, `python-dependency-expert` |
 | CSO | Security | `context-aware-debugging`, `legal-compliance` |
 | CMO | Marketing & branding | `marketing-brand`, `go-to-market`, `growth-analytics`, `pm-design-thinking` |
-| CRO | Revenue & sales | `sales`, `go-to-market`, `business-model`, `growth-analytics` |
-| CPO | Product definition | `product`, `idea-validation`, `pm-design-thinking`, `test-driven-scaffolding`, `bdd-developer` |
+| CRO | Revenue & sales | `sales`, `go-to-market`, `business-model`, `growth-analytics`, `business-development` |
+| CPO | Product definition | `product`, `idea-validation`, `pm-design-thinking`, `test-first-development`, `frontend-ui-ux` |
 | CCO | Customer experience | `customer-success`, `pm-design-thinking`, `growth-analytics` |
-| COO | Operations & people | `operations`, `finance-accounting`, `obsidian-knowledge` |
+| COO | Operations & people | `operations`, `finance-accounting`, `obsidian-knowledge`, `career-resume`, `github-profile`, `portfolio-strategy`, `open-source-contribution`, `technical-writing` |
 | CLO | Legal & compliance | `legal-compliance` |
+
+**All 31 skills mapped.** Every skill in `skills/` has at least one Office owner.
 
 ## 4. First-Time Setup
 
@@ -80,6 +87,13 @@ docker compose run --rm --no-deps dev sh -c "gh pr list"
 
 ## 6. Coding Conventions
 
+- **Markdown front matter (mandatory):** Every `.md` file in the Unicorn project must include YAML front matter with `name` and `description` fields. This makes files discoverable by AI agents and compatible with the skill system.
+  ```yaml
+  ---
+  name: kebab-case-name
+  description: One-line description of what this file does or contains.
+  ---
+  ```
 - **TypeScript**: Strict mode, ES2022, explicit types. Path alias `@/*` maps to project root.
 - **React/Next.js**: Server Components by default. `'use client'` only when necessary. Preserve accessibility.
 - **Tailwind CSS 4**: Utility classes, dark mode compatible.
@@ -90,10 +104,10 @@ docker compose run --rm --no-deps dev sh -c "gh pr list"
 
 | Path | Purpose |
 |------|---------|
-| `knowledge/` | Read-only context (never modify) |
+| `template_knowledge/` | Read-only template (copied to personal_knowledge on init) |
+| `personal_knowledge/` | Personal vault — ideas, resume, career materials (git-ignored) |
 | `projects/` | All code changes happen here |
-| `skills/` | Canonical agent skill definitions |
-| `personal_knowledge/` | Personal vault (git-ignored) |
+| `skills/` | Canonical agent skill definitions (31 skills) |
 
 ## 8. Troubleshooting
 
@@ -130,7 +144,7 @@ This constraint ensures every developer, from day one, works in the same environ
 
 ## 10. Additional Constraints
 
-- Do not modify files in `knowledge/` unless explicitly instructed.
+- Do not modify files in `template_knowledge/` unless explicitly instructed.
 - Do not run containers in foreground mode; always use `-d`.
 - Do not skip tests. Run `npx vitest run` (inside the container) before committing changes.
 - Do not create files outside the project structure without explicit instruction.

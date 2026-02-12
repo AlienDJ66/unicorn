@@ -1,3 +1,8 @@
+---
+name: example-reference
+description: Placeholder template for BDD developer reference documentation with structure suggestions.
+---
+
 # Reference Documentation for Bdd Developer
 
 This is a placeholder for detailed reference documentation.

@@ -22,6 +22,7 @@ Run these steps once after cloning or forking the Unicorn project.
 mkdir -p .claude && ln -s ../skills .claude/skills
 mkdir -p .agent && ln -s ../skills .agent/skills
 mkdir -p .gemini && ln -s ../skills .gemini/skills
+mkdir -p .gemini && ln -s ../skills .gemini/skills
 ```
 
 Verify: `ls -la .claude/skills .agent/skills .gemini/skills`
@@ -70,7 +71,7 @@ docker compose run --rm --no-deps dev sh -c "<command>"
 
 ## 3. Initialize Personal Knowledge
 
-Initialize your `personal_knowledge/` vault. See [AGENTS.md Section 11](AGENTS.md#11-personal-development-and-knowledge-management) for usage guidelines.
+Initialize your `personal_knowledge/` vault. See [UNICORN_CONSTITUTION.md Section 11](UNICORN_CONSTITUTION.md#11-personal-development-and-knowledge-management) for usage guidelines.
 
 **Natural Language (Recommended)**:
 ```
