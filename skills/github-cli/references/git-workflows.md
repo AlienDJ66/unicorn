@@ -1,3 +1,8 @@
+---
+name: git-workflows
+description: Common Git workflows for GitHub including cloning, committing, pushing, pulling, branching, merging, and conflict resolution.
+---
+
 # Git Workflows for GitHub
 
 This document provides common Git workflows and commands for interacting with GitHub.

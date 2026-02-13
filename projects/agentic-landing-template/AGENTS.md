@@ -1,6 +1,11 @@
+---
+name: agentic-landing-template-agents
+description: Agent instructions for the agentic landing template project. Tech stack, container commands, code conventions, and constraints.
+---
+
 # AGENTS.md — Agentic Landing Template
 
-Agent instructions for this project. For the Unicorn organization's master constitution, see [../../AGENTS.md](../../AGENTS.md).
+Agent instructions for this project. For the Unicorn organization's master constitution, see [../../UNICORN_CONSTITUTION.md](../../UNICORN_CONSTITUTION.md).
 
 ## Project Goals
 
@@ -75,7 +80,7 @@ docker compose exec dev <command>
 ## Constraints
 
 ### Do Not
-- Run `npm install`, `npm run dev`, `npm run build`, `npx`, or any Node.js execution on the host. All code runs inside Docker containers. See [../../AGENTS.md §9](../../AGENTS.md) for the full container-first policy.
+- Run `npm install`, `npm run dev`, `npm run build`, `npx`, or any Node.js execution on the host. All code runs inside Docker containers. See [../../UNICORN_CONSTITUTION.md §9](../../UNICORN_CONSTITUTION.md) for the full container-first policy.
 - Remove accessibility attributes from HTML.
 - Run blocking container commands (always use `-d` or npm scripts).
 - Delete TypeScript types without replacement.

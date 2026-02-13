@@ -73,3 +73,10 @@ I need to test this with users tomorrow."
 "Before building, generate 3 different approaches to solving [user problem]. For each, state: the assumption it tests, the simplest possible implementation, and how we'd know it worked."
 
 The agent becomes a product thinking partner, not just a feature factory.
+
+## Related Skills
+
+| Skill | When to use it |
+|-------|---------------|
+| `idea-validation` | Before feature definition — validate that the problem is worth solving |
+| `product` | After feature definition — write PRDs, prioritize roadmaps, manage scope |

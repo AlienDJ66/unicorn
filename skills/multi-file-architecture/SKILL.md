@@ -45,6 +45,6 @@ Before prompting, identify:
 
 ## Power Move
 
-Combine with test-driven-scaffolding: "Add user authentication with JWT. Write the tests first, then implement to pass them."
+Combine with test-first-development: "Add user authentication with JWT. Write the tests first, then implement to pass them."
 
 The agent handles the 47 file touches. You define what "authenticated" means.

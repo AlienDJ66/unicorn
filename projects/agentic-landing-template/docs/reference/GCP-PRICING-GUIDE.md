@@ -1,3 +1,8 @@
+---
+name: gcp-pricing-guide
+description: Guide to understanding GCP costs, free tier limits, and cost optimization for Cloud Run landing page deployments.
+---
+
 # GCP Pricing Guide
 
 **Understanding Google Cloud costs, free tier, and how to keep your landing page deployment free (or nearly free)**

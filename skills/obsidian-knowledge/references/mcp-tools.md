@@ -1,3 +1,8 @@
+---
+name: mcp-tools
+description: Detailed reference for all Obsidian MCP tools including read, update, search, list, frontmatter, tags, and delete operations.
+---
+
 # Obsidian MCP Tools Reference
 
 Detailed reference for all available MCP tools for Obsidian vault management.

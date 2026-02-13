@@ -1,3 +1,8 @@
+---
+name: personal-development-goals
+description: Track personal goals, objectives, and resume-related information—a working document for personal development planning.
+---
+
 # Personal Development Goals
 
 This file is for storing personal goals, objectives, and resume-related information. It is intended for personal development purposes and is not tracked by Git.

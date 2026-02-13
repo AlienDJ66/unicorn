@@ -1,3 +1,8 @@
+---
+name: knowledge-management-workflows
+description: Practical workflows for managing a personal knowledge vault including daily capture, idea tracking, learning notes, and weekly reviews.
+---
+
 # Knowledge Management Workflows
 
 Practical workflows for managing your personal knowledge vault with AI assistance.

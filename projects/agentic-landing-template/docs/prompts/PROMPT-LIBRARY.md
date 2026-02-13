@@ -1,3 +1,8 @@
+---
+name: prompt-library
+description: Ready-to-use natural language prompts for content customization, styling, Docker operations, and AWS deployment.
+---
+
 # Prompt Library
 
 Copy and paste these natural language prompts to your AI agent. Replace bracketed content with your information.

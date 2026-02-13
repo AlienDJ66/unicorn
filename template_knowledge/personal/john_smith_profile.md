@@ -1,3 +1,8 @@
+---
+name: john-smith-profile
+description: Sample personal profile for an AI Orchestration Architect—demonstrates how to articulate who you are, what you do, and the impact you make.
+---
+
 # John Smith — AI Orchestration Architect
 
 ## Who I Am

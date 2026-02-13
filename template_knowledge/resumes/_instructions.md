@@ -1,3 +1,8 @@
+---
+name: resumes-professional-docs
+description: Store resumes, cover letters, and professional documents—centralize career materials, track achievements, and customize for applications.
+---
+
 # Resumes & Professional Documents
 
 This folder stores your resume, cover letters, and other professional documents.

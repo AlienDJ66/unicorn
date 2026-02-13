@@ -1,3 +1,8 @@
+---
+name: gh-cli-commands
+description: Quick reference for GitHub CLI commands covering authentication, repos, pull requests, and issues.
+---
+
 # GitHub CLI (gh) Commands
 
 This document provides a quick reference for common commands using the official GitHub CLI tool (`gh`). The `gh` CLI simplifies interaction with GitHub from your terminal.

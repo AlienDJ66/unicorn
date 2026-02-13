@@ -1,3 +1,8 @@
+---
+name: agentic-landing-template
+description: AI-powered personal landing page template. Your first portfolio project — tells your story and showcases your work.
+---
+
 # Agentic Landing Page Template
 
 > **"When AI can do anything for you, what will you build?"**
@@ -80,7 +85,7 @@ The default template works for consulting services, professional portfolios, dig
 
 AI coding agents read these files automatically:
 - `AGENTS.md` — Project goals, conventions, constraints
-- `../../AGENTS.md` — Master constitution (Unicorn organization)
+- `../../UNICORN_CONSTITUTION.md` — Master constitution (Unicorn organization)
 
 ## Contributing
 

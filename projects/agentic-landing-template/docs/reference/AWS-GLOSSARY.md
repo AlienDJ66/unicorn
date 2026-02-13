@@ -1,3 +1,8 @@
+---
+name: aws-glossary
+description: Beginner-friendly reference explaining core AWS cloud services with analogies and usage guidance.
+---
+
 # AWS Services Glossary
 
 **A beginner-friendly reference for AWS cloud services**

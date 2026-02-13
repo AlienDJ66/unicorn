@@ -1,3 +1,8 @@
+---
+name: content-templates
+description: Copy-paste content templates for customizing landing pages across consulting, portfolio, resume, and enterprise use cases.
+---
+
 # Content Templates
 
 ## Customize Your Landing Page

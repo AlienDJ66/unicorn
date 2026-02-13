@@ -1,3 +1,8 @@
+---
+name: git-recovery
+description: Guide for recovering from common Git mistakes including undoing changes, amending commits, reverting, and using reflog.
+---
+
 # Git Recovery: Undoing Mistakes
 
 This document provides guidance on how to recover from common Git mistakes. Git is powerful, and almost anything can be undone if you know how.

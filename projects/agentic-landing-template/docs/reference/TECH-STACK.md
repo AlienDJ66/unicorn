@@ -1,3 +1,8 @@
+---
+name: tech-stack
+description: Documents the complete technology stack, AI agent skills, and subagents for the agentic landing page template.
+---
+
 # Tech Stack Documentation
 
 ## Agentic Landing Page Template

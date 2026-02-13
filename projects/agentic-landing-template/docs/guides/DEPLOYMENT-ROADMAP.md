@@ -1,3 +1,7 @@
+---
+name: deployment-roadmap
+description: Phase-by-phase roadmap for deploying a landing page from local development to AWS production.
+---
 
 # AWS Deployment Roadmap
 

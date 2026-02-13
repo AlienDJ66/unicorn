@@ -1,3 +1,8 @@
+---
+name: companies-knowledge
+description: Information about companies you are interested in, have worked with, or are researching—track employers, clients, market trends, competitors, and industry leaders.
+---
+
 # Companies Knowledge
 
 This folder is dedicated to information about companies you are interested in, have worked with, or are researching.

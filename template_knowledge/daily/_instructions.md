@@ -1,3 +1,8 @@
+---
+name: daily-notes
+description: Daily thoughts, reflections, and quick notes—capture ideas, observations, tasks, and journal entries throughout each day.
+---
+
 # Daily Notes
 
 This folder is for your daily thoughts, reflections, and quick notes.

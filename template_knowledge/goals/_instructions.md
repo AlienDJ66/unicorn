@@ -1,3 +1,8 @@
+---
+name: goals-objectives
+description: Set, track, and review personal and professional goals—define actionable targets, monitor progress, and maintain focus on aspirations.
+---
+
 # Goals & Objectives
 
 This folder is dedicated to setting, tracking, and reviewing your personal and professional goals.

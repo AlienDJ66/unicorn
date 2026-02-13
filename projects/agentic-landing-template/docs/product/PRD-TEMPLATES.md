@@ -1,3 +1,8 @@
+---
+name: prd-templates
+description: Product requirements document templates tailored to consulting, portfolio, resume, and enterprise use cases.
+---
+
 # PRD Templates by Use Case
 
 ## Product Requirements Document Templates

@@ -1,3 +1,8 @@
+---
+name: manual-setup
+description: Manual setup instructions for the Obsidian MCP server using npx with environment variable configuration.
+---
+
 # Manual Setup with npx
 
 If you prefer not to use Docker Desktop, you can set up the Obsidian MCP server manually.

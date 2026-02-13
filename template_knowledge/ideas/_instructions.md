@@ -1,3 +1,8 @@
+---
+name: ideas-brainstorms
+description: Repository for all ideas and brainstorming sessions—capture nascent concepts, document creative exploration, and connect thoughts freely.
+---
+
 # Ideas & Brainstorms
 
 This folder is a repository for all your ideas, big or small, and brainstorming sessions.
