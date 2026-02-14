@@ -53,11 +53,21 @@ When you clone this project, you get:
 
 ## Start Here
 
+### 1. Check Prerequisites
+
+Before cloning, make sure you have the required tools. **[Read the Prerequisites Guide →](PREREQUISITES.md)**
+
+**TL;DR:** Install [Docker Desktop](https://www.docker.com/products/docker-desktop). Everything else runs inside a container.
+
+### 2. Clone and Set Up
+
 ```bash
 # Clone the project
 git clone https://github.com/pingwu/solo-unicorn.git
 cd solo-unicorn
 ```
+
+### 3. Start Your AI Coding Agent
 
 Then start your [CLI coding agent](docs/coding-agents.md) and tell it:
 **"Run the init unicorn setup"** — it will create your personal knowledge vault and connect the skills.
@@ -95,6 +105,7 @@ This is a community project. If you've solved a real problem for real people, pa
 
 ## Learn More
 
+- [Prerequisites](PREREQUISITES.md) — Tools you need (or just use Docker)
 - [Skills Reference](docs/skills-reference.md) — All 36 skills, organized by stage and category
 - [Coding Agents](docs/coding-agents.md) — Compare Claude Code, Gemini CLI, Kiro CLI, OpenCode, and more
 - [Philosophy](docs/philosophy.md) — The Ask, Listen, Do framework
