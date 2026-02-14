@@ -5,7 +5,7 @@
 // Gemini CLI or Claude Code. See README.md for prompt library.
 // ============================================================
 
-import { MobileNav } from "@/components/MobileNav";
+import { Navbar } from "@/components/Navbar";
 import ContactForm from "@/components/ContactForm";
 import {
   CheckIcon,
@@ -57,40 +57,17 @@ export default function Home() {
               </span>
             </div>
 
-            {/* Desktop Navigation Links */}
-            <div className="hidden md:flex items-center gap-8">
-              <a
-                href="#services"
-                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                Experience
-              </a>
-              <a
-                href="#about"
-                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                About
-              </a>
-              <a
-                href="/resume"
-                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                Resume
-              </a>
-              <a
-                href="#contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-              >
-                Hire Me
-              </a>
-            </div>
-
-            {/* Mobile Navigation */}
-            <MobileNav />
+            {/* Responsive Navigation */}
+            <Navbar
+              links={[
+                { href: "#services", label: "Experience" },
+                { href: "#about", label: "About" },
+                { href: "/resume", label: "Resume" },
+                { href: "#contact", label: "Hire Me", isButton: true },
+              ]}
+            />
           </div>
-        </nav>
-
-        {/* ============================================================ */}
+        </nav>        {/* ============================================================ */}
         {/* HERO SECTION - Main headline and call to action              */}
         {/* Prompt: "Update hero with name '[Name]' and title '[Title]'" */}
         {/* ============================================================ */}
