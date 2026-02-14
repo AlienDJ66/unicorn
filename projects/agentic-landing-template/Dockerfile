@@ -10,13 +10,17 @@
 #      docker build --platform linux/amd64 -t <tag> .
 # 4. Always test locally with `npm run docker:prod` before pushing to the cloud.
 
-# Stage 1: Build the application (needs ALL deps — TypeScript is required
-# to transpile next.config.ts even though it's a devDependency)
+# Stage 1: Build the application
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci
 COPY . .
+
+# Add build-time environment variables for Next.js
+ARG NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+ENV NEXT_PUBLIC_RECAPTCHA_SITE_KEY=$NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+
 RUN mkdir -p public
 RUN npm run build
 
