@@ -312,15 +312,26 @@ Use your AI coding assistant to set up the required GCP infrastructure.
 us-central1-docker.pkg.dev/my-landing-page/my-landing-page
 ```
 
+### Step 7.2: Create Secrets in Secret Manager (Recommended)
+
+Securely store your API keys and sensitive configuration.
+
+| Natural Language | CLI Command | What's Happening |
+|-----------------|-------------|------------------|
+| "Create a secret for my Resend API key" | `echo -n "re_..." \| gcloud secrets create RESEND_API_KEY --data-file=-` | Creates a new secret and uploads the value securely |
+| "Grant Cloud Run access to my secrets" | `gcloud secrets add-iam-policy-binding [SECRET_NAME] --member="serviceAccount:[PROJECT_NUMBER]-compute@developer.gserviceaccount.com" --role="roles/secretmanager.secretAccessor"` | Allows the Cloud Run identity to read secret values |
+
 ---
 
 ## 8. Deploy Application with AI
 
 ### Step 8.1: Build Production Docker Image
 
+Next.js inlines `NEXT_PUBLIC_` variables at build time. Fetch them from Secret Manager first.
+
 | Natural Language | CLI Command | What's Happening |
 |-----------------|-------------|------------------|
-| "Build the production Docker image tagged as my-landing-page:latest" | `docker build -t my-landing-page:latest .` | Reads Dockerfile, downloads base images, installs dependencies, builds Next.js app, creates optimized image |
+| "Fetch site key and build the production image" | `SITE_KEY=$(gcloud secrets versions access latest --secret="NEXT_PUBLIC_RECAPTCHA_SITE_KEY") && docker build --build-arg NEXT_PUBLIC_RECAPTCHA_SITE_KEY=$SITE_KEY -t my-landing-page:latest .` | Uses the secret value as a build argument for Next.js inlining |
 | "Verify the image was built" | `docker images my-landing-page` | Lists local Docker images matching the name, shows size and creation time |
 
 ### Step 8.2: Tag Image for Artifact Registry
@@ -340,7 +351,7 @@ us-central1-docker.pkg.dev/my-landing-page/my-landing-page
 
 | Natural Language | CLI Command | What's Happening |
 |-----------------|-------------|------------------|
-| "Deploy my landing page image to Cloud Run with minimum resources" | See command below | Creates a fully managed web service that pulls your image, runs it, handles scaling, and provides a public URL |
+| "Deploy my landing page image to Cloud Run with secrets" | See command below | Creates a managed service that pulls your image and maps Secret Manager keys to environment variables |
 
 **Full deployment command:**
 
@@ -354,7 +365,9 @@ gcloud run deploy my-landing-page \
   --cpu 1 \
   --min-instances 0 \
   --max-instances 3 \
-  --allow-unauthenticated
+  --allow-unauthenticated \
+  --set-secrets="RESEND_API_KEY=RESEND_API_KEY:latest,RECAPTCHA_SECRET_KEY=RECAPTCHA_SECRET_KEY:latest,NEXT_PUBLIC_RECAPTCHA_SITE_KEY=NEXT_PUBLIC_RECAPTCHA_SITE_KEY:latest" \
+  --update-env-vars CONTACT_EMAIL_DESTINATION=your@email.com
 ```
 
 **What each flag does:**
@@ -362,11 +375,13 @@ gcloud run deploy my-landing-page \
 - `--region`: Where to run the service (us-central1 for lowest cost)
 - `--platform managed`: Use fully managed Cloud Run (serverless)
 - `--port`: Which port your app listens on (Next.js uses 3000)
-- `--memory`: RAM allocated per instance (512Mi is enough for a landing page)
+- `--memory`: RAM allocated per instance
 - `--cpu`: Number of vCPUs per instance
-- `--min-instances 0`: **Scale to zero** when no traffic (saves money!)
+- `--min-instances 0`: Scale to zero when no traffic
 - `--max-instances 3`: Cap scaling to control costs
 - `--allow-unauthenticated`: Makes the service publicly accessible
+- `--set-secrets`: Maps Secret Manager secrets to environment variables in the container.
+- `--update-env-vars`: Sets or updates regular environment variables.
 
 ### Step 8.5: Wait for Deployment
 

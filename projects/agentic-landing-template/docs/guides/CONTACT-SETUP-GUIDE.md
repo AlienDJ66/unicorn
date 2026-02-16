@@ -59,15 +59,33 @@ NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key_here
 RECAPTCHA_SECRET_KEY=your_secret_key_here
 ```
 
-### For Production (GCP):
-When you deploy next, we will include these as environment variables so the server can access them securely.
+### For Production (GCP Secret Manager):
+In production, we use **Google Secret Manager** to securely store these keys. The keys are then mapped to the Cloud Run service.
+
+1.  **Create Secrets**:
+    ```bash
+    echo -n "re_your_key" | gcloud secrets create RESEND_API_KEY --data-file=-
+    echo -n "your_site_key" | gcloud secrets create NEXT_PUBLIC_RECAPTCHA_SITE_KEY --data-file=-
+    echo -n "your_secret_key" | gcloud secrets create RECAPTCHA_SECRET_KEY --data-file=-
+    ```
+
+2.  **Grant Access**:
+    Ensure the Cloud Run service account has the `Secret Manager Secret Accessor` role for these secrets.
+
+3.  **Deploy with Secrets**:
+    The deployment command should include the `--set-secrets` flag:
+    ```bash
+    gcloud run deploy agentic-landing \
+      --set-secrets="RESEND_API_KEY=RESEND_API_KEY:latest,RECAPTCHA_SECRET_KEY=RECAPTCHA_SECRET_KEY:latest,NEXT_PUBLIC_RECAPTCHA_SITE_KEY=NEXT_PUBLIC_RECAPTCHA_SITE_KEY:latest" \
+      ...
+    ```
 
 ---
 
 ## Summary of Keys
 
-| Key | Purpose | Where it goes |
-| :--- | :--- | :--- |
-| **Resend API Key** | Sends the actual email | Backend (`.env.local`) |
-| **reCAPTCHA Site Key** | Identifies your site to Google | Frontend (`layout.tsx`) |
-| **reCAPTCHA Secret Key** | Verifies the visitor's human score | Backend (`route.ts`) |
+| Key | Purpose | Where it goes (Local) | Where it goes (Production) |
+| :--- | :--- | :--- | :--- |
+| **Resend API Key** | Sends the actual email | `.env.local` | Secret Manager (`RESEND_API_KEY`) |
+| **reCAPTCHA Site Key** | Identifies site to Google | `.env.local` | Secret Manager (`NEXT_PUBLIC_RECAPTCHA_SITE_KEY`) |
+| **reCAPTCHA Secret Key** | Verifies human score | `.env.local` | Secret Manager (`RECAPTCHA_SECRET_KEY`) |

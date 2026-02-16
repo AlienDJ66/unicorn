@@ -1,3 +1,9 @@
+/**
+ * NOTE: Environment variables (like reCAPTCHA site key) are inlined at build time.
+ * For production, ensure Secret Manager keys are fetched during the Docker build.
+ * See /docs/guides/CONTACT-SETUP-GUIDE.md for details.
+ */
+
 "use client";
 
 import { useState } from "react";
@@ -60,16 +66,16 @@ export default function ContactForm() {
 
       const result = await response.json();
 
-      if (response.ok) {
+      if (response.ok && result.success) {
         setStatus("success");
         reset();
       } else {
         setStatus("error");
-        setErrorMessage(result.error || "Something went wrong. Please try again.");
+        setErrorMessage(result.error || "Failed to send message. Please try again later.");
       }
     } catch (err) {
       setStatus("error");
-      setErrorMessage("Failed to send message. Please check your connection.");
+      setErrorMessage("Network error. Please check your connection and try again.");
     }
   };
 

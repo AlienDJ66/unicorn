@@ -1,5 +1,7 @@
 /**
- * SECURITY NOTE: Refactored to prevent secret exposure in URLs.
+ * SECURITY NOTE: API keys are managed via Google Secret Manager.
+ * See /docs/guides/CONTACT-SETUP-GUIDE.md and /docs/guides/GCP-DEPLOYMENT-GUIDE.md for setup instructions.
+ * Refactored to prevent secret exposure in URLs.
  * See: /docs/security/SECURITY-FIX-LOG.md
  */
 
@@ -74,8 +76,8 @@ export async function POST(req: NextRequest) {
     if (error) {
       console.error("Resend Error:", error);
       return NextResponse.json(
-        { error: "Failed to send email" },
-        { status: 500 }
+        { error: "Email service is temporarily unavailable. Please try again later or reach out via LinkedIn." },
+        { status: 503 }
       );
     }
 
@@ -83,7 +85,7 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     console.error("API Error:", err);
     return NextResponse.json(
-      { error: "An unexpected error occurred" },
+      { error: "An unexpected error occurred. Please check your connection or try again later." },
       { status: 500 }
     );
   }
