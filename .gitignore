@@ -20,6 +20,7 @@
 # User-owned directories (my_* pattern — never check these in)
 # Users should create a separate git repo inside each for version control.
 my_*
+personal_knowledge/
 
 # Curriculum (proprietary course content)
 curriculum/
