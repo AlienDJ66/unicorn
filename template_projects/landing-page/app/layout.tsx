@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -10,9 +9,9 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 // Prompt: "Update the page title and description for SEO"
 // ============================================================
 export const metadata: Metadata = {
-  title: "Bolun Du - Software Engineer & AI Researcher",
-  description: "Software Engineer specializing in building scalable full-stack tools and intelligent agentic systems. Former Software Engineer at Meta and current AI Researcher.",
-  keywords: ["Software Engineer", "AI Researcher", "Full-stack Developer", "Agentic AI", "Meta"],
+  title: "Your Name - Your Professional Title | Your Services",
+  description: "Your value proposition in 150-160 characters. What do you do and who do you help?",
+  keywords: ["Keyword 1", "Keyword 2", "Keyword 3", "Keyword 4"],
 };
 
 export default function RootLayout({
@@ -22,13 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning>
-        {children}
-        <Script
-          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
-          strategy="beforeInteractive"
-        />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
