@@ -1,0 +1,43 @@
+# Development Container Dockerfile
+# Optimized for local development with hot reload
+# SECURITY NOTE: Hardened to reduce attack surface.
+# See: /docs/security/SECURITY-FIX-LOG.md
+
+FROM node:20-alpine
+
+# Add build arguments for user and group IDs
+ARG UID=1000
+ARG GID=1000
+
+# Install essential development tools
+RUN apk add --no-cache \
+    git \
+    curl \
+    bash \
+    openssh-client \
+    github-cli \
+    && rm -rf /var/cache/apk/*
+
+# Set working directory
+WORKDIR /workspace
+
+# Create non-root user for development with arguments
+RUN addgroup -g $GID node || true && \
+    adduser -u $UID -G node -s /bin/bash -D node || true
+
+# Set ownership
+RUN chown -R node:node /workspace
+
+# Switch to non-root user
+USER node
+
+# Environment variables for development
+ENV NODE_ENV=development
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PATH="/workspace/node_modules/.bin:$PATH"
+
+# Expose development ports
+EXPOSE 3000
+
+# Default command (can be overridden)
+CMD ["npm", "run", "dev"]
